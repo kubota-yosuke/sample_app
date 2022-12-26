@@ -1,0 +1,13 @@
+# Package Information for pkg-config
+
+prefix=/Users/kubotayousuke/workspaces/sample_app/vendor/bundle/ruby/2.6.0/gems/sqlite3-1.5.4/ports/arm64-apple-darwin20.3.0/sqlite3/3.40.0
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: SQLite
+Description: SQL database engine
+Version: 3.40.0
+Libs: -L${libdir} -lsqlite3
+Libs.private: -lz 
+Cflags: -I${includedir}

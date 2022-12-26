@@ -1,0 +1,15 @@
+ ././install-sh -c -d '/Users/kubotayousuke/workspaces/sample_app/vendor/bundle/ruby/2.6.0/gems/sqlite3-1.5.4/ports/arm64-apple-darwin20.3.0/sqlite3/3.40.0/lib'
+ /bin/sh ./libtool   --mode=install /usr/bin/install -c   libsqlite3.la '/Users/kubotayousuke/workspaces/sample_app/vendor/bundle/ruby/2.6.0/gems/sqlite3-1.5.4/ports/arm64-apple-darwin20.3.0/sqlite3/3.40.0/lib'
+libtool: install: /usr/bin/install -c .libs/libsqlite3.lai /Users/kubotayousuke/workspaces/sample_app/vendor/bundle/ruby/2.6.0/gems/sqlite3-1.5.4/ports/arm64-apple-darwin20.3.0/sqlite3/3.40.0/lib/libsqlite3.la
+libtool: install: /usr/bin/install -c .libs/libsqlite3.a /Users/kubotayousuke/workspaces/sample_app/vendor/bundle/ruby/2.6.0/gems/sqlite3-1.5.4/ports/arm64-apple-darwin20.3.0/sqlite3/3.40.0/lib/libsqlite3.a
+libtool: install: chmod 644 /Users/kubotayousuke/workspaces/sample_app/vendor/bundle/ruby/2.6.0/gems/sqlite3-1.5.4/ports/arm64-apple-darwin20.3.0/sqlite3/3.40.0/lib/libsqlite3.a
+libtool: install: ranlib /Users/kubotayousuke/workspaces/sample_app/vendor/bundle/ruby/2.6.0/gems/sqlite3-1.5.4/ports/arm64-apple-darwin20.3.0/sqlite3/3.40.0/lib/libsqlite3.a
+ ././install-sh -c -d '/Users/kubotayousuke/workspaces/sample_app/vendor/bundle/ruby/2.6.0/gems/sqlite3-1.5.4/ports/arm64-apple-darwin20.3.0/sqlite3/3.40.0/bin'
+  /bin/sh ./libtool   --mode=install /usr/bin/install -c sqlite3 '/Users/kubotayousuke/workspaces/sample_app/vendor/bundle/ruby/2.6.0/gems/sqlite3-1.5.4/ports/arm64-apple-darwin20.3.0/sqlite3/3.40.0/bin'
+libtool: install: /usr/bin/install -c sqlite3 /Users/kubotayousuke/workspaces/sample_app/vendor/bundle/ruby/2.6.0/gems/sqlite3-1.5.4/ports/arm64-apple-darwin20.3.0/sqlite3/3.40.0/bin/sqlite3
+ ././install-sh -c -d '/Users/kubotayousuke/workspaces/sample_app/vendor/bundle/ruby/2.6.0/gems/sqlite3-1.5.4/ports/arm64-apple-darwin20.3.0/sqlite3/3.40.0/include'
+ /usr/bin/install -c -m 644 sqlite3.h sqlite3ext.h '/Users/kubotayousuke/workspaces/sample_app/vendor/bundle/ruby/2.6.0/gems/sqlite3-1.5.4/ports/arm64-apple-darwin20.3.0/sqlite3/3.40.0/include'
+ ././install-sh -c -d '/Users/kubotayousuke/workspaces/sample_app/vendor/bundle/ruby/2.6.0/gems/sqlite3-1.5.4/ports/arm64-apple-darwin20.3.0/sqlite3/3.40.0/share/man/man1'
+ /usr/bin/install -c -m 644 sqlite3.1 '/Users/kubotayousuke/workspaces/sample_app/vendor/bundle/ruby/2.6.0/gems/sqlite3-1.5.4/ports/arm64-apple-darwin20.3.0/sqlite3/3.40.0/share/man/man1'
+ ././install-sh -c -d '/Users/kubotayousuke/workspaces/sample_app/vendor/bundle/ruby/2.6.0/gems/sqlite3-1.5.4/ports/arm64-apple-darwin20.3.0/sqlite3/3.40.0/lib/pkgconfig'
+ /usr/bin/install -c -m 644 sqlite3.pc '/Users/kubotayousuke/workspaces/sample_app/vendor/bundle/ruby/2.6.0/gems/sqlite3-1.5.4/ports/arm64-apple-darwin20.3.0/sqlite3/3.40.0/lib/pkgconfig'

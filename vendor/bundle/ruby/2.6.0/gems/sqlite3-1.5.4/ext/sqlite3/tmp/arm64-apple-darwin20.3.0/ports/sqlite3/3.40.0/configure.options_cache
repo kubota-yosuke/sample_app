@@ -1,0 +1,1 @@
+["--host=arm64-apple-darwin20.3.0", "--enable-static", "--disable-shared", "--enable-shared=no", "--enable-static=yes", "CC=clang", "CFLAGS=-fPIC -O2", "--prefix=/Users/kubotayousuke/workspaces/sample_app/vendor/bundle/ruby/2.6.0/gems/sqlite3-1.5.4/ports/arm64-apple-darwin20.3.0/sqlite3/3.40.0"]

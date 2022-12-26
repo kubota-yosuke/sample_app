@@ -1,0 +1,33 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-10 offset-md-1 col-lg-8 offset-lg-2">
+    <h1>ユーザー一覧</h1>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th class="mr-1">氏名</th>
+                    <th class="mr-1">メールアドレス</th>
+                    <th class="mr-1"></th>
+                    <th class="mr-1"></th>
+                </tr>
+            </thead>
+            <tbody>
+                <% @users.each do |user| %>
+                <tr>
+                    <td><%= link_to user.name, user %></td>
+                    <td><%= user.email %></td>
+                    <td><%= link_to '編集', edit_user_path(user), class: "btn btn-primary" %></td>
+                    <td><%= link_to '削除', user, method: :delete, class: "btn btn-danger"  %></td>
+                </tr>
+                <% end %>
+            </tbody>
+        </table>
+
+
+
+      <div class='text-center'>
+        <%= link_to '新規登録', new_user_path %>
+      </div>
+    </div>
+  </div>
+</div>

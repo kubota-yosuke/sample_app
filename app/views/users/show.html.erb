@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-10 offset-md-1 col-lg-8 offset-lg-2">
+    <h1>ユーザー一覧</h1>
+        <table class="table">
+            <tbody>
+                <tr>
+                    <th>Name</th>
+                    <td><%= @user.name %></td>
+                </tr>
+                <tr>
+                    <th>メールアドレス</th>
+                    <td><%= @user.email %></td>
+                </tr>
+            </tbody>
+        </table>
+      <div class='text-center'>
+        <%= link_to 'ユーザー一覧', users_path %>
+      </div>
+    </div>
+  </div>
+</div>
