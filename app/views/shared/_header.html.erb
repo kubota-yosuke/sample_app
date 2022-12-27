@@ -16,8 +16,8 @@
           </a>
 
           <div class="dropdown-menu dropdown-menu-right">
-            <%= link_to '一覧', '#', class: 'dropdown-item' %>
-            <%= link_to '作成', '#', class: 'dropdown-item' %>
+            <%= link_to '一覧', vehicles_path, class: 'dropdown-item' %>
+            <%= link_to '作成', new_vehicle_path, class: 'dropdown-item' %>
           </div>
         </li>
 
@@ -26,7 +26,7 @@
             <%= image_tag 'sample', size: '40x40', class: 'rounded-circle mr15'%>
           </a>
           <div class="dropdown-menu dropdown-menu-right">
-            <div class="dropdown-item">久保田陽介</div>
+            <div class="dropdown-item"><%= current_user.name %></div>
             <div class="dropdown-divider"></div>
             <%= link_to 'プロフィール', '#', class: 'dropdown-item' %>
 
