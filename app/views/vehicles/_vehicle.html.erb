@@ -1,0 +1,31 @@
+<div class="col-sm-12 col-lg-4 mb-3">
+  <div id="vehicle-id-<%= vehicle.id %>">
+    <div class="card">
+      <%= image_tag 'sample.jpg', class: 'card-img-top', size: '300x200' %>
+      <div class="card-body">
+        <h4 class="card-title">
+          <%= link_to vehicle.vehicle_name, vehicle %>
+        </h4>
+        <div class='mr10 float-right'>
+            <%= link_to edit_vehicle_path(vehicle), id: 'button-edit-#{vehicle.id}' do %>
+                <%= icon 'fa', 'pen' %>
+            <% end %>
+            <%= link_to vehicle, id: 'button-delete-#{vehicle.id}', method: :delete, data: {confirm: ''} do %>
+                <%= icon 'fas', 'trash' %>
+            <% end %>
+        </div>
+        <ul class="list-inline">
+          <li class="list-inline-item">
+            <%= icon 'far', 'user' %>
+            <%= vehicle.user.name %>
+          </li>
+          <li class="list-inline-item">
+            <%= icon 'far', 'calendar' %>
+            <%= l vehicle.created_at, format: :long %>
+          </li>
+        </ul>
+        <p class="card-text"><%= vehicle.description %></p>
+      </div>
+    </div>
+  </div>
+</div>
