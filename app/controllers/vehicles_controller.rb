@@ -40,6 +40,10 @@ class VehiclesController < ApplicationController
         redirect_to vehicles_path
     end
 
+    def likes
+        @likes_vehicles = current_user.like_vehicles.includes(:user).order(created_at: :desc)
+    end
+
     private
     def vehicle_params
         params.require(:vehicle).permit(:vehicle_name, :description)
