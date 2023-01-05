@@ -19,6 +19,12 @@
           <p><%= @vehicle.description %></p>
         </div>
       </article>
+      <%= render 'chats/chats', { chats: @chats } %>
+      <%= render 'chats/form', { vehicle: @vehicle, chat: @chat } %>
     </div>
   </div>   
 </div>
+
+<script>
+  $("#chats").scrollTop($("#chats")[0].scrollHeight);
+</script>

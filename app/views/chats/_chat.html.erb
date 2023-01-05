@@ -1,0 +1,16 @@
+<%if current_user.own?(chat) %>
+    <div class="mycomment">
+        <p><%=chat.body%></p>
+    </div>
+<%else%>
+    <div class="fukidasi">
+        <div class="faceicon">
+            <%= image_tag 'sample' %>
+        </div>
+        <div class="chatting">
+            <div class="says">
+                <p><%=chat.body %></p>
+            </div>
+        </div>
+    </div>
+<%end%>

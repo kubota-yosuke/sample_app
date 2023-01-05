@@ -1,0 +1,6 @@
+    <%= form_with model: chat, url: [vehicle, chat], local: true do |f| %>
+      <%= f.text_area :body, class: 'form-control' %>
+      <div class="text-right">
+          <%= f.submit value="送信", class: 'btn btn-primary' %>
+      </div>
+    <% end %>

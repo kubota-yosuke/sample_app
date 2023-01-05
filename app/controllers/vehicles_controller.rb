@@ -5,6 +5,8 @@ class VehiclesController < ApplicationController
 
     def show
         @vehicle = Vehicle.find(params[:id])
+        @chat = Chat.new
+        @chats = @vehicle.chats.includes(:user).order(created_at: :asc)
     end
 
     def new

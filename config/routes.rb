@@ -15,5 +15,7 @@ Rails.application.routes.draw do
     collection do
       get 'likes'
     end
+
+    resources :chats, only: [:create], shallow: true
   end
 end
