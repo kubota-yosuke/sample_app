@@ -1,0 +1,14 @@
+<div class="container pt-3">
+  <h1>予約済み一覧</h1>
+  <div class="row">
+    <div class="col-12">
+      <div class="row">
+        <%= @matchings.each do |matching| %>
+          <% if matching.vehicle.user_id == current_user.id or matching.user_id == current_user.id%>
+            <%= render 'vehicles/vehicle', { vehicle: matching.vehicle } %>
+          <% end %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

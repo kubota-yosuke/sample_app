@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_01_05_084646) do
+ActiveRecord::Schema.define(version: 2023_01_06_135557) do
 
   create_table "chats", force: :cascade do |t|
     t.text "body", null: false
@@ -30,6 +30,24 @@ ActiveRecord::Schema.define(version: 2023_01_05_084646) do
     t.index ["user_id", "vehicle_id"], name: "index_likes_on_user_id_and_vehicle_id", unique: true
     t.index ["user_id"], name: "index_likes_on_user_id"
     t.index ["vehicle_id"], name: "index_likes_on_vehicle_id"
+  end
+
+  create_table "matchings", force: :cascade do |t|
+    t.integer "user_id", null: false
+    t.integer "vehicle_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_matchings_on_user_id"
+    t.index ["vehicle_id"], name: "index_matchings_on_vehicle_id"
+  end
+
+  create_table "requests", force: :cascade do |t|
+    t.integer "user_id", null: false
+    t.integer "vehicle_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_requests_on_user_id"
+    t.index ["vehicle_id"], name: "index_requests_on_vehicle_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -56,5 +74,9 @@ ActiveRecord::Schema.define(version: 2023_01_05_084646) do
   add_foreign_key "chats", "vehicles"
   add_foreign_key "likes", "users"
   add_foreign_key "likes", "vehicles"
+  add_foreign_key "matchings", "users"
+  add_foreign_key "matchings", "vehicles"
+  add_foreign_key "requests", "users"
+  add_foreign_key "requests", "vehicles"
   add_foreign_key "vehicles", "users"
 end

@@ -16,8 +16,10 @@
           </a>
 
           <div class="dropdown-menu dropdown-menu-right">
-            <%= link_to '一覧', vehicles_path, class: 'dropdown-item' %>
+            <%= link_to '探す', vehicles_path, class: 'dropdown-item' %>
             <%= link_to '作成', new_vehicle_path, class: 'dropdown-item' %>
+            <%= link_to 'お気に入り一覧', likes_vehicles_path, class: 'dropdown-item' %>
+            <%= link_to '予約済み一覧', matchings_path, class: 'dropdown-item' %>
           </div>
         </li>
 
@@ -29,8 +31,6 @@
             <div class="dropdown-item"><%= current_user.name %></div>
             <div class="dropdown-divider"></div>
             <%= link_to 'プロフィール', '#', class: 'dropdown-item' %>
-            <%= link_to 'お気に入り一覧', likes_vehicles_path, class: 'dropdown-item' %>
-
             <%= link_to 'ログアウト', logout_path, class: 'dropdown-item', method: :delete %>
           </div>
         </li>

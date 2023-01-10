@@ -17,5 +17,10 @@ Rails.application.routes.draw do
     end
 
     resources :chats, only: [:create], shallow: true
+
+    resources :requests, only: [:index, :create, :destroy]
+    resources :matchings, only: [:create, :destroy]
   end
+
+  get 'matchings', to: 'matchings#index'
 end

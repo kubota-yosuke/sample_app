@@ -1,0 +1,13 @@
+<div class="container applicant-wrapper">
+    <h3>承認待ちユーザ一覧</h3>
+    <div class="row">
+        <% @requests.each do |request| %>
+        <div class="col-6">
+            <%= link_to request.user.name, request.user %>
+            <%= link_to "承認", vehicle_matchings_path(request.vehicle, user_id: request.user.id, request_id: request.id), method: :post, class:"mini-green-link-btn font-bold text-line-none" %>
+            <%= link_to "却下", vehicle_request_path(request.vehicle, request), method: :delete, class:"mini-red-link-btn font-bold text-line-none" %>
+            <br>
+        </div>
+        <% end %>
+    </div>
+</div>

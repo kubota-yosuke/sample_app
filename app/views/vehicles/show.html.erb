@@ -18,11 +18,40 @@
           </div>
           <p><%= @vehicle.description %></p>
         </div>
+        <% if @vehicle.matching.present? %>
+          <% if @vehicle.matching.user.id == current_user.id %>
+            <%= link_to 'キャンセルする', vehicle_matching_path(@vehicle, current_user.matchings.find_by(vehicle_id: @vehicle.id)), method: :delete,class: "btn btn-danger" %>
+          <% end %>
+        <% end %>
+        <% if @vehicle.user_id == current_user.id && @vehicle.matching.present? == false %>
+            <%= link_to "承認待ち一覧", vehicle_requests_path(@vehicle), class:"btn btn-primary" %>
+        <% elsif @vehicle.matching.present? == false %>
+            <% if @request %>
+                <%= link_to '申請取消', vehicle_request_path(@vehicle, @request), method: :delete, class: "btn btn-primary" %>
+            <% else %>
+                <%= link_to '予約申請', vehicle_requests_path(@vehicle), method: :post, class: "btn btn-primary" %>
+            <% end %>
+        <% elsif @vehicle.matching.present? %>
+          <% if @vehicle.user_id == current_user.id %>
+            
+          <% end %>
+        <% end %>
       </article>
-      <%= render 'chats/chats', { chats: @chats } %>
-      <%= render 'chats/form', { vehicle: @vehicle, chat: @chat } %>
+      <% if @vehicle.matching.present? %>
+        <% if @vehicle.user_id == current_user.id or @vehicle.matching.user.id == current_user.id %>
+          <% if @vehicle.user_id == current_user.id %>
+            <%= @vehicle.matching.user.name %>さんとのトーク
+          <% else %>
+            <%= @vehicle.user.name %>さんとのトーク
+          <% end %>
+          <%= render 'chats/chats', { chats: @chats } %>
+          <%= render 'chats/form', { vehicle: @vehicle, chat: @chat } %>
+        <% else %>
+          <p>他の方が予約済みです</p>
+        <% end %>
+      <% end %>
     </div>
-  </div>   
+  </div>
 </div>
 
 <script>
